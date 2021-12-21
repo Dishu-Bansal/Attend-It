@@ -1,0 +1,63 @@
+type Attending @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  Clockin: String
+  Clockout: String
+  Date: String
+  UserID: String
+  WorkingHours: String
+}
+
+type Companies @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  Name: String
+}
+
+enum LeaveType {
+  SICK
+  CASUAL
+  PAID
+  EMERGENCY
+}
+
+enum LeaveStatus {
+  PENDING
+  APPROVED
+  REJECTED
+}
+
+type Leaves @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  From: String
+  To: String
+  LeaveReason: String
+  RejectReason: String
+  Status: LeaveStatus
+  Type: LeaveType
+  UserID: String
+}
+
+type Attendance @model @auth(rules: [{allow: public}, {allow: private}]) {
+  id: ID!
+  Clockin: String
+  Clockout: String
+  Date: String
+  UserID: String
+  WorkingHours: String
+}
+
+enum AccessLevel {
+  EMPLOYEE
+  ADMIN
+}
+
+type Users @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  Name: String
+  PhoneNumber: String
+  Username: String
+  UserID: String
+  Email: String
+  Company: String
+  Access: AccessLevel
+}
+ 

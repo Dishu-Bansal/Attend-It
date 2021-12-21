@@ -1,0 +1,20 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-attendit-staging-42813-authRole",
+      "UnauthRoleArn": "arn:aws:iam::796833917868:role/amplify-attendit-staging-42813-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::796833917868:role/amplify-attendit-staging-42813-authRole",
+      "Region": "ap-south-1",
+      "DeploymentBucketName": "amplify-attendit-staging-42813-deployment",
+      "UnauthRoleName": "amplify-attendit-staging-42813-unauthRole",
+      "StackName": "amplify-attendit-staging-42813",
+      "StackId": "arn:aws:cloudformation:ap-south-1:796833917868:stack/amplify-attendit-staging-42813/0234cc00-144b-11ec-b730-0af9c7adb786",
+      "AmplifyAppId": "d3opjzkwmz9jht"
+    },
+    "categories": {
+      "auth": {
+        "Attendit": {}
+      }
+    }
+  }
+}
